@@ -561,7 +561,7 @@ main {
 
   .hero-title h2 {
     position: relative;
-    margin-left: 1em;
+    /* margin-left: 1em; */
     z-index: var(--layer-3);
   }
 
