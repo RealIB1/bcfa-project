@@ -454,7 +454,8 @@ main {
   justify-content: center;
   align-items: center;
   box-shadow: var(--shadow-3);
-  padding: 1em .5em;
+  padding: 1em;
+  margin-top: 1em;
 }
 
 .team-member .profile h2 {
@@ -981,8 +982,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 1em; */
-  /* max-width: none; */
 }
 
 .content article {
@@ -1013,34 +1012,40 @@ main {
  
 /* About Media Query */
 
+.about-container {
+  max-width: 70em;
+}
+
 .about-container h1, .our-team h1 {
-  font-size: var(--size-fluid-6);
+  font-size: var(--size-fluid-5);
 }
 
 .about-content article {
   margin: 1em;
-  font-size: var(--size-fluid-4);
+  font-size: var(--size-fluid-2);
 }
 
-
-
+.our-team {
+  background-color: var(--grape-7);
+}
 
 .team-member {
   display: grid;
   place-content: center;
   place-items: center;
+  /* background-color: var(--grape-7); */
 }
 
 .team-member h2 {
   text-align: center;
-  font-size: var(--size-8);
+  font-size: var(--size-7);
   margin-top: 0.5em;
   margin-left: 1em;
 }
 
 .team-member p {
   margin-top: 1em;
-  font-size: var(--size-fluid-4);
+  font-size: var(--size-fluid-2);
   margin-left: 1em;
 }
 
@@ -1117,6 +1122,7 @@ main {
 
 .form-content textarea {
   height: 7em;
+  width: 45rem;
 }
 .form-content input, .form-content textarea {
   padding: var(--size-4);
