@@ -520,7 +520,7 @@ main {
   box-shadow: var(--shadow-3);
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (max-width: 768px) {
   .navbar {
     padding: 1em;
   }
@@ -652,7 +652,7 @@ main {
   }
 
   .team-member img {
-    margin-top: 2em;
+    /* margin-top: 1em; */
     margin-left: 1em;
     width: var(--size-13);
     height: var(--size-13);
@@ -678,6 +678,10 @@ main {
   .info .address {
     margin-bottom: var(--size-5);
     /* margin-left: -10em; */
+    box-shadow: none;
+  }
+
+  .mapouter {
     box-shadow: none;
   }
 

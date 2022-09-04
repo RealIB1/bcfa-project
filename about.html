@@ -25,8 +25,8 @@
       referrerpolicy="no-referrer"
       defer
     ></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="script.js" defer></script>
-
     <title>BFCA</title>
   </head>
   <body>
@@ -210,37 +210,7 @@
         </form>
         <div class="address">
           <h2>Location</h2>
-          <div class="mapouter">
-            <div class="gmap_canvas">
-              <iframe
-                width="600"
-                height="500"
-                id="gmap_canvas"
-                src="https://maps.google.com/maps?q=Naotom%20Pharmacy%20(a%20mutti%20Pharmacy),%20Kumasi&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                frameborder="0"
-                scrolling="no"
-                marginheight="0"
-                marginwidth="0"
-              ></iframe
-              ><a href="https://fmovies-online.net">fmovies</a><br /><style>
-                .mapouter {
-                  /* position: relative; */
-                  text-align: right;
-                  height: 500px;
-                  width: 600px;
-                }</style
-              ><a href="https://www.embedgooglemap.net"
-                >embedding a google map</a
-              ><style>
-                .gmap_canvas {
-                  overflow: hidden;
-                  background: none !important;
-                  height: 500px;
-                  width: 600px;
-                }
-              </style>
-            </div>
-          </div>
+          <div id="map"></div>
         </div>
       </div>
     </main>
@@ -282,5 +252,9 @@
         <p>Blockchain Foundation Africa &copy; 2022</p>
       </footer>
     </section>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
   </body>
 </html>
