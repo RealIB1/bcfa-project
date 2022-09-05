@@ -348,6 +348,8 @@ main {
   height: var(--size-fluid-9);
   margin: 0.5em;
   background-color: var(--grape-7);
+  border-radius: var(--radius-conditional-3);
+  box-shadow: var(--shadow-2);
 }
 
 /* Apply Form */
@@ -734,6 +736,7 @@ main {
     position: relative;
     color: var(--gray-1);
     width: var(--size-header-1);
+    margin-top: 4em;
   }
 
   .hero-title img {
@@ -842,6 +845,9 @@ main {
     max-width: 100%;
   }
 
+  .form-content .form-group button {
+    width: 100%;
+  }
   .info .address h2 {
     margin: 1em auto;
     margin-left: 3em;
