@@ -66,11 +66,13 @@ a {
 
 img,
 picture,
-svg {
+svg, video, iframe {
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 1/2;
+  object-fit: fill;
 }
 
 button {
@@ -83,6 +85,16 @@ button {
   html:focus-within {
     scroll-behavior: auto;
   }
+
+
+@media (dynamic-range:high) {
+  @supports (color(display-p3 0 .5 1)) {
+      :where(html) {
+          --link: color(display-p3 0 .5 1);
+          --link-visited: color(display-p3 .6 .2 1)
+      }
+  }
+}
 
   *,
   *::before,
@@ -270,6 +282,11 @@ a i.fa-whatsapp:hover {
   box-shadow: var(--shadow-1);
 }
 
+.hero-title img {
+  width: var(--size-15);
+  height: var(--size-15);
+}
+
 .hero-title .events-img {
   width: var(--size-fluid-8);
   height: var(--size-fluid-8);
@@ -348,7 +365,7 @@ main {
   width: var(--size-fluid-9);
   height: var(--size-fluid-9);
   margin: 0.5em;
-  background-color: var(--grape-7);
+  /* background-color: var(--grape-7); */
   border-radius: var(--radius-conditional-3);
   box-shadow: var(--shadow-2);
 }
@@ -360,7 +377,6 @@ main {
   justify-content: center;
   align-items: center;
   margin: var(--size-fluid-3);
-  /* background-color: var(--gray-1); */
   padding: var(--size-fluid-4);
   border-radius: var(--radius-3);
   box-shadow: var(--shadow-3);
@@ -522,6 +538,18 @@ main {
   margin-top: 1em;
 }
 
+.newsletter {
+  font-size: var(--size-fluid-3);
+  padding: 0 .5em;
+  margin: .5em 0;
+  font-weight: var(--font-weight-5);
+  /* background-color: var(--red-7); */
+}
+
+.newsletter + .newsletter {
+  font-size: var(--size-4);
+}
+
 .form-message button:hover {
   background-color: var(--blue-8);
   box-shadow: var(--shadow-1);
@@ -541,119 +569,6 @@ main {
   text-align: center;
 }
 
-.info .address h2 {
-  margin-top: -3em;
-  margin-left: 3.5em;
-}
-
-.mapouter {
-  box-shadow: var(--shadow-3);
-}
-
-@media screen and (max-width: 480px) {
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  .contents .gallery-imgs {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-content: center;
-    place-items: center;
-    margin-bottom: 1em;
-    width: 100%;
-    background-color: var(--grape-7);
-  }
-
-  .contents .gallery-imgs img {
-    width: var(--size-fluid-10);
-    height: var(--size-fluid-9);
-    margin: 0.5em;
-    }
-
-  .content article {
-    margin: 0 auto;
-    padding: 0;
-    font-size: var(--size-fluid-2);
-  }
-
-  /* About Media Query */
-
-  .about-container h1, .our-team h1 {
-    font-size: var(--size-fluid-3);
-  }
-
-
-  .team-member p {
-    margin-top: 1em;
-    margin-right: 1.2em;
-    font-size: var(--size-fluid-2);
-  }
-
-  .info {
-    display: block;
-    width: var(--size-fluid-10);
-    /* margin: 0 auto; */
-    overflow: hidden;
-  }
-
-
-  .form-group {
-    margin-left: -1em;
-    width: var(--size-fluid-9);
-  }
-
-  .form-group input, .form-group textarea {
-    margin: 0 auto;
-    width: var(--size-fluid-9);
-  }
-
-  .form-group input {
-    width: var(--size-2);
-    margin-left: 0;
-  }
-
-.form-group button {
-    width: var(--size-2);
-    margin-left: 0;
-  }
-
-
-  
-  .info .address h2 {
-    margin: 1em auto;
-    margin-left: 3em;
-    margin-bottom: 0.5em;
-    text-align: center;
-    display: block;
-  }
-
-  .info .address {
-    margin-bottom: var(--size-5);
-    /* margin-left: -10em; */
-    box-shadow: none;
-  }
-
-  .footer h4 {
-    font-weight: var(--font-weight-6);
-    font-size: var(--size-3);
-  }
-
-  .footer a {
-    color: var(--blue-9);
-    font-size: var(--size-3);
-    padding: .5em 0;
-  }
-
-  .call-us {
-    margin-top: 1em;
-  }
-}
 
 @media only screen and (max-width: 768px) {
   .navbar {
@@ -705,7 +620,7 @@ main {
   }
   
   .navbar ul li a:hover {
-    background: none;
+    background: var(--gray-4);
     color: var(--blue-7);
   }
 
@@ -807,7 +722,7 @@ main {
   }
 
   .contents .gallery-imgs img {
-    width: var(--size-fluid-10);
+    width: var(--size-fluid-9);
     height: var(--size-fluid-9);
     margin: 0.5em;
     }
@@ -878,7 +793,7 @@ main {
 
   .form-group input {
     width: var(--size-14);
-    margin-left: -2em;
+    /* margin-left: -2em; */
   }
 
 .form-group button {
@@ -915,6 +830,129 @@ main {
   }
 }
 
+@media screen and (width <= 480px) {
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 auto; */
+  }
+
+  .contents .gallery-imgs {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    place-items: center;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  .contents .gallery-imgs img {
+    width: var(--size-fluid-1);
+    height: var(--size-fluid-9);
+    margin: 0.5em;
+    }
+
+  .content article {
+    margin: 0 auto;
+    padding: 0;
+    font-size: var(--size-fluid-2);
+  }
+
+
+  .contents .gallery-imgs {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: var(--size-fluid-1);
+    margin-bottom: var(--size-fluid-1);
+    margin-right: none;
+    width: 100%;
+    background-color: var(--red-6);
+  }
+
+  .contents .gallery-imgs img {
+    width: var(--size-fluid-10);
+    height: var(--size-fluid-10);
+    margin: 0.5em;
+    background-color: var(--grape-7);
+    }
+  /* About Media Query */
+
+  .about-container h1, .our-team h1 {
+    font-size: var(--size-fluid-3);
+  }
+
+
+  .team-member p {
+    margin-top: 1em;
+    margin-right: 1.2em;
+    font-size: var(--size-fluid-2);
+  }
+
+  .info {
+    display: block;
+    width: var(--size-fluid-10);
+    /* margin: 0 auto; */
+    overflow: hidden;
+  }
+
+
+  .form-group {
+    display: block;
+      width: var(--size-fluid-9);
+  }
+
+  .form-group input, .form-group textarea {
+    margin: 0 auto;
+    width: var(--size-fluid-13);
+  }
+
+  .form-group input {
+    width: var(--size-13);
+    margin-left: 0;
+  }
+
+.form-group button {
+    font-size: var(--size-3);
+    width: var(--size-13);
+    margin-left: 0;
+  }
+
+
+  
+  .info .address h2 {
+    margin: 1em auto;
+    margin-left: 3em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    display: block;
+  }
+
+  .info .address {
+    margin-bottom: var(--size-5);
+    /* margin-left: -10em; */
+    box-shadow: none;
+  }
+
+  .footer h4 {
+    font-weight: var(--font-weight-6);
+    font-size: var(--size-3);
+  }
+
+  .footer a {
+    color: var(--blue-9);
+    font-size: var(--size-3);
+    padding: .5em 0;
+  }
+
+  .call-us {
+    margin-top: 1em;
+  }
+}
 
 /* Media iPads */
 @media screen and (width >= 768px) and (width <= 1024px) {
