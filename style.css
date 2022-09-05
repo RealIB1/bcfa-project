@@ -193,12 +193,12 @@ a i.fa-whatsapp:hover {
 }
 
 .nav-menu .nav-list {
-  /* margin: 0 0.5em; */
+  margin: 0 .3em;
   padding: 1em 0;
 }
 
 .nav-menu .nav-list a.nav-link {
-  padding: 0.5em 1em;;
+  padding: 0.4em .8em;
 }
 
 .hamburger {
@@ -276,12 +276,13 @@ a i.fa-whatsapp:hover {
 }
 
 main {
-  padding-top: 6.5em;
+  padding-top: 6em;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .contents {
