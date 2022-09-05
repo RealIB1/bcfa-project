@@ -188,13 +188,13 @@ a i.fa-whatsapp:hover {
 .nav-menu {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   overflow: hidden;
 }
 
 .nav-menu .nav-list {
-  margin: 0 0.5em;
-  padding: 1em;
+  /* margin: 0 0.5em; */
+  padding: 1em 0;
 }
 
 .nav-menu .nav-list a.nav-link {
@@ -612,6 +612,16 @@ main {
     width: var(--size-fluid-9);
   }
 
+  .form-group input {
+    width: var(--size-2);
+    margin-left: 0;
+  }
+
+.form-group button {
+    width: var(--size-2);
+    margin-left: 0;
+  }
+
 
   
   .info .address h2 {
@@ -679,17 +689,23 @@ main {
     z-index: 0;
     transform-origin: top;
     transition: 0.4s ease-out;
-    margin-bottom: 1em;
   }
 
   .nav-menu .nav-list {
-    margin: .5em 0;
-    padding: 0.2em;
-    padding-bottom: 1em;
+    margin: 0 .5em;
+    padding: 0.1em;
+    margin-bottom: 1em;
   }
-  .nav-link {
-    font-size: var(--size-fluid-2);
-    margin-left: 0.5em;
+
+  .navbar ul li a{
+    font-size: var(--size-3);
+
+    width: 100%;
+  }
+  
+  .navbar ul li a:hover {
+    background: none;
+    color: var(--blue-7);
   }
 
   .hamburger {
@@ -721,6 +737,7 @@ main {
     font-size: var(--size-fluid-4);
     font-weight: var(--font-weight-7);
     margin: 0;
+    margin-top: 1.2em;
     z-index: var(--layer-3);
   }
 
@@ -736,7 +753,6 @@ main {
     position: relative;
     color: var(--gray-1);
     width: var(--size-header-1);
-    margin-top: 4em;
   }
 
   .hero-title img {
@@ -760,6 +776,13 @@ main {
     align-items: center;
     /* margin: 1em; */
     /* max-width: none; */
+  }
+
+  .contents h1 {
+    font-size: var(--size-3);
+    padding: 0;
+    width: 100vw;
+    text-align: center;
   }
 
   .content article {
@@ -840,13 +863,26 @@ main {
     display: block;
   }
 
-
-  .form-content input {
-    max-width: 100%;
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: var(--size-15);
+    box-shadow: none;
+    width: 100%;
   }
 
-  .form-content .form-group button {
-    width: 100%;
+
+  .form-group input {
+    width: var(--size-14);
+    margin-left: -2em;
+  }
+
+.form-group button {
+    width: var(--size-14);
+    margin-left: -1.5em;
   }
   .info .address h2 {
     margin: 1em auto;
@@ -881,63 +917,6 @@ main {
 
 /* Media iPads */
 @media screen and (width >= 768px) and (width <= 1024px) {
-  .navbar {
-    padding: 1em;
-  }
-  .navbar a {
-    font-size: var(--size-fluid-3);
-  }
-
-  .navbar .logo a:hover {
-    background-color: none;
-  }  
-
-
-  .nav-menu {
-    position: fixed;
-    top: 4rem;
-    left: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: var(--gray-3);
-    border-bottom: var(--border-size-2) solid var(--blue-9);
-    transition: all 0.4s ease-in;
-    z-index: 0;
-  }
-
-
-  .nav-menu.active {
-    top: 4rem;
-    left: 0;
-    z-index: 0;
-    transform-origin: top;
-    transition: 0.4s ease-out;
-    margin-bottom: 1em;
-  }
-
-  .nav-menu .nav-list {
-    margin: .5em 0;
-    padding: 0.2em;
-    padding-bottom: 1em;
-  }
-  .nav-link {
-    font-size: var(--size-fluid-2);
-    margin-left: 0.5em;
-  }
-
-  .hamburger {
-    display: block;
-    --webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-  }
-
-  .hamburger.active {
-    --webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
 main {
   padding-top: 4em;
 }
@@ -953,23 +932,24 @@ main {
 
 .hero-title h1 {
   position: relative;
-  font-size: var(--size-fluid-6);
+  font-size: var(--size-fluid-5);
   font-weight: var(--font-weight-7);
   margin: 0;
+  margin-top: 1em;
   z-index: var(--layer-3);
 }
 
 .hero-title h2 {
-  font-size: var(--size-fluid-5);
+  font-size: var(--size-fluid-4);
   position: relative;
-  margin-left: 0;
+  margin-left: 3em;
   text-align: center;
   z-index: var(--layer-3);
 }
 
 .hero-title button {
   position: relative;
-  font-size: var(--size-7);
+  font-size: var(--size-4);
   color: var(--gray-1);
   width: var(--size-fluid-10);
   cursor: pointer;
@@ -1135,6 +1115,9 @@ main {
   font-size: var(--size-fluid-4);
 }
 
+.form {
+  box-shadow: none;
+}
 
 .info .address h2 {
   margin: 1em auto;
