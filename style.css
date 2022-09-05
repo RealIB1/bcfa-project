@@ -670,7 +670,7 @@ main {
 
   .nav-menu {
     position: fixed;
-    top: 4rem;
+    top: 5rem;
     left: 100%;
     width: 100%;
     display: flex;
@@ -685,7 +685,7 @@ main {
 
 
   .nav-menu.active {
-    top: 4rem;
+    top: 5rem;
     left: 0;
     z-index: 0;
     transform-origin: top;
