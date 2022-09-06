@@ -836,8 +836,9 @@ textarea {
     margin: 0 auto;
     width: var(--size-15);
     box-shadow: none;
-    width: 100%;
+    width: 100vw;
   }
+
 
 
   .form-group textarea, .form-group input{
@@ -847,6 +848,7 @@ textarea {
 
   .form-group button {
     width: 100%;
+    margin: 1em auto;
   }
 
   .info .address h2 {
@@ -943,20 +945,18 @@ textarea {
 
   .info {
     display: block;
-    /* width: var(--size-fluid-15); */
     margin: 0 auto;
     overflow: hidden;
   }
 
 
-  .form-group {
+  .content .form-group {
     display: block;
-      /* width: var(--size-fluid-9); */
+      width: 100%;
   }
 
   .form-group input, .form-group textarea {
     width: 100%;
-    margin: 0 auto;
       }
 
  
@@ -964,7 +964,6 @@ textarea {
 .form-group button {
     font-size: var(--size-3);
     width: 100%;
-    margin-left: 0;
   }
 
 
@@ -979,7 +978,6 @@ textarea {
 
   .info .address {
     margin-bottom: var(--size-5);
-    /* margin-left: -10em; */
     box-shadow: none;
   }
 
@@ -1140,6 +1138,12 @@ textarea {
     overflow: hidden;
     width: 100%;
   }
+
+  .form {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+  }
   
   
   .form-content {
@@ -1159,6 +1163,7 @@ textarea {
   
   .form-content button {
     width: var(--size-15);
+    /* margin: 1em auto; */
   }
   
   .form-group {
@@ -1172,8 +1177,12 @@ textarea {
   
   .form-group button {
     margin-top: 1.5em;
-    width: var(--size-fluid-10);
+    width: 100%;
     font-size: var(--size-fluid-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .form-group input {
