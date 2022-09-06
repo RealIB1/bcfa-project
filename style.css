@@ -1172,7 +1172,7 @@ textarea {
   }
   
   .form-group button {
-    margin-top: 1em;
+    margin-top: 1.5em;
     width: var(--size-fluid-10);
     font-size: var(--size-fluid-3);
   }
