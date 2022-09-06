@@ -30,22 +30,28 @@
     <title>About</title>
   </head>
   <body>
-      <!-- Whatsapp button -->
+    <!-- Whatsapp button -->
     <a href="#whatsapp-link" id="whatsapp-btn">
       <!-- <i class="fa-brands fa-square-whatsapp"></i>
        -->
-       <i class="fa-brands fa-whatsapp"></i>
-       <p class="whatsap-us">Whatsapp</p>
-      </a>
+      <i class="fa-brands fa-whatsapp"></i>
+      <p class="whatsap-us">Whatsapp</p>
+    </a>
     <nav class="navbar">
       <div class="logo">
-        <a href="index.html" class="logo-link"><img src="assets/images/crypto.webp" alt="Logo" /></a>
+        <a href="index.html" class="logo-link"
+          ><img src="assets/images/crypto.webp" alt="Logo"
+        /></a>
       </div>
 
       <ul class="nav-menu">
         <li class="nav-list"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-list"><a href="events.html" class="nav-link">Events</a></li>
-        <li class="nav-list"><a href="services.html" class="nav-link">Service</a></li>
+        <li class="nav-list">
+          <a href="events.html" class="nav-link">Events</a>
+        </li>
+        <li class="nav-list">
+          <a href="services.html" class="nav-link">Service</a>
+        </li>
         <li class="nav-list">
           <a href="gallery.html" class="nav-link">Gallery</a>
         </li>
@@ -65,7 +71,7 @@
     <main>
       <section class="container">
         <div class="about-container">
-            <h2 class="header">About Us</h2>
+          <h2 class="header">About Us</h2>
           <div class="about-content">
             <article class="about-article">
               Blockchain Foundation Africa is a non-profit organization created
@@ -87,7 +93,7 @@
             </article>
           </div>
           <div class="about-image">
-            <img src="images/about.jpg" alt="About Us" />
+            <img src="assets/images/crypto.webp" alt="About Us" />
           </div>
         </div>
         <div class="our-team">
@@ -95,7 +101,11 @@
           <div class="team-container">
             <div class="team-member">
               <div class="profile">
-                <img src="images/team-member.jpg" alt="Team Member" />
+                <img
+                  src="images/team-member.jpg"
+                  alt="Team Member"
+                  class="showcase"
+                />
                 <h2 class="header">Philip Agyei Asare</h2>
               </div>
               <p>
@@ -122,7 +132,11 @@
             </div>
             <div class="team-member">
               <div class="profile">
-                <img src="images/team-member.jpg" alt="Team Member" />
+                <img
+                  src="images/team-member.jpg"
+                  alt="Team Member"
+                  class="showcase"
+                />
                 <h2 class="header">Narigamba Mwinsuuboe</h2>
               </div>
               <p>
@@ -141,7 +155,11 @@
             </div>
             <div class="team-member">
               <div class="profile">
-                <img src="images/team-member.jpg" alt="Team Member" />
+                <img
+                  src="images/team-member.jpg"
+                  alt="Team Member"
+                  class="showcase"
+                />
                 <h2 class="header">Kwaku Abedi</h2>
               </div>
               <p>
@@ -164,7 +182,7 @@
 
             <div class="team-member">
               <div class="profile">
-                <img src="" alt="Team Member" />
+                <img src="" alt="Team Member" class="showcase" />
                 <h2 class="header">John Doe</h2>
               </div>
               <p>
@@ -195,11 +213,7 @@
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  rows="5"
-                ></textarea>
+                <textarea name="message" id="message" rows="5"></textarea>
               </div>
               <div class="form-group">
                 <button type="submit">Submit</button>
@@ -209,7 +223,22 @@
         </form>
         <div class="address">
           <h2 class="header">Location</h2>
-          <div id="map-canvas"></div>
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe
+                
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=Naotom%20Pharmacy%20(a%20mutti%20Pharmacy),%20kumasi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe
+              ><a href="https://www.whatismyip-address.com/divi-discount/"
+                ></a>
+              
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -251,9 +280,9 @@
         <p>Blockchain Foundation Africa &copy; 2022</p>
       </footer>
     </section>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    <!-- <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVuiRU9AFH1WFHzZV849Ko4oa4moukVgE&callback=initMap">
-    </script>
+    </script> -->
   </body>
 </html>
