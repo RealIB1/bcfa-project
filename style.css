@@ -750,7 +750,7 @@ textarea {
   }
 
   .content article {
-    margin: 0.5em 1.5em;
+    margin: 0em;
   }
 
   .content img {
@@ -843,11 +843,11 @@ textarea {
 
   .form-group textarea, .form-group input{
     cursor: text;
-    width: 100%;
+    /* width: 100%; */
   }
 
   .form-group button {
-    width: 100%;
+    /* width: 100%; */
     margin: 1em auto;
   }
 
@@ -1062,7 +1062,7 @@ textarea {
   }
   
   .content article {
-    margin: 0.5em 1.5em;
+    margin: 0.5em;
     font-size: var(--size-6);
   }
   
