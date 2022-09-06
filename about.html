@@ -198,7 +198,6 @@
                 <textarea
                   name="message"
                   id="message"
-                  cols="63"
                   rows="5"
                 ></textarea>
               </div>
@@ -210,7 +209,7 @@
         </form>
         <div class="address">
           <h2 class="header">Location</h2>
-          <div id="map"></div>
+          <div id="map-canvas"></div>
         </div>
       </div>
     </main>
@@ -252,9 +251,9 @@
         <p>Blockchain Foundation Africa &copy; 2022</p>
       </footer>
     </section>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-      defer
-    ></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVuiRU9AFH1WFHzZV849Ko4oa4moukVgE&callback=initMap">
+    </script>
   </body>
 </html>
