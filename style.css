@@ -35,7 +35,6 @@ input {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  /*For animation dark mode*/
   transition: 0.4s;
 }
 
@@ -301,18 +300,18 @@ a i.fa-whatsapp:hover {
 main {
   padding-top: 6em;
   width: 100%;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
-  /* overflow: hidden; */
+  align-items: center;
+  overflow: hidden;
 }
 
 .contents {
   width: 100%;
-  margin: 0.5em 1em;
+  /* margin: 0.5em 1em; */
   scroll-behavior: smooth;
-  max-width: 75rem;
+  max-width: 80rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -343,7 +342,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: var(--size-fluid-2);
 }
 
 .content article {
@@ -587,6 +585,7 @@ textarea {
   padding: 0 .5em;
   margin: .5em 0;
   font-weight: var(--font-weight-5);
+  text-align: center;
   /* background-color: var(--red-7); */
 }
 
@@ -740,14 +739,13 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: 1em; */
-    /* max-width: none; */
+    margin: 1em;
+    max-width: none;
   }
 
   .contents h1 {
     font-size: var(--size-3);
     padding: 0;
-    width: 100vw;
     text-align: center;
   }
 
@@ -818,6 +816,7 @@ textarea {
   .info {
     display: block;
     width: var(--size-fluid-12);
+    width: 100%;
     /* overflow: hidden; */
   }
 
@@ -846,6 +845,9 @@ textarea {
     width: 100%;
   }
 
+  .form-group button {
+    width: 100%;
+  }
 
   .info .address h2 {
     margin: 1em auto;
@@ -941,30 +943,27 @@ textarea {
 
   .info {
     display: block;
-    width: var(--size-fluid-10);
-    /* margin: 0 auto; */
+    /* width: var(--size-fluid-15); */
+    margin: 0 auto;
     overflow: hidden;
   }
 
 
   .form-group {
     display: block;
-      width: var(--size-fluid-9);
+      /* width: var(--size-fluid-9); */
   }
 
   .form-group input, .form-group textarea {
+    width: 100%;
     margin: 0 auto;
-    /* width: var(--size-fluid-13); */
-  }
+      }
 
-  .form-group input {
-    width: var(--size-13);
-    margin-left: 0;
-  }
+ 
 
 .form-group button {
     font-size: var(--size-3);
-    width: var(--size-13);
+    width: 100%;
     margin-left: 0;
   }
 
