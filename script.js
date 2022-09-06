@@ -25,22 +25,78 @@ barMenu.addEventListener("click", openNav);
 navLink.forEach((n) => n.addEventListener("click", closeNav));
 
 
-// Google Map Marker Api
+const contents = document.querySelectorAll(".contents");
+const imgs = document.querySelectorAll(".showcase");
+const paragraphs = document.querySelectorAll(".para");
+const heads = document.querySelectorAll(".head");
 
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  const uluru = { lat: -25.344, lng: 131.031 };
-  // The map, centered at Uluru
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: uluru,
-  });
-  // The marker, positioned at Uluru
-  const marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
+window.addEventListener(
+  "scroll",
+  contentAnimate,
+  imageAnimate,
+  paragraphAnimate,
+  headAnimate
+);
+
+
+
+function contentAnimate() {
+  
+  const triggerAnimate = (window.innerHeight / 6) * 8;
+
+  contents.forEach((content) => {
+    const contentAnim = content.getBoundingClientRect().top;
+
+    if (contentAnim < triggerAnimate) {
+        content.classList.add("content");
+      } else {
+        content.classList.remove("content");
+      }
   });
 }
 
-window.initMap = initMap;
+function imageAnimate() {
+
+  const triggerAnimate = (window.innerHeight / 5) * 4 ;
+  // console.log(triggerAnimate);
+
+  imgs.forEach((img) => {
+    const imgsAnim = img.getBoundingClientRect().top;
+
+    if (imgsAnim < triggerAnimate) {
+        img.classList.add("showcases");
+      } else {
+        img.classList.remove("showcases");
+      }
+  });
+}
+
+
+
+function paragraphAnimate() {
+  
+  const triggerAnimate = (window.innerHeight / 5 )* 4;
+
+  paragraphs.forEach((paras) => {
+    const paraAnim = paras.getBoundingClientRect().top;
+
+    if (paraAnim >= triggerAnimate) {
+        paras.classList.add("paras");
+      } else {
+        paras.classList.remove("paras");
+      }
+  });
+}
+function headAnimate() {
+  const triggerAnimate = (window.innerHeight / 5) * 4;
+
+  heads.forEach((head) => {
+    const headAnim = head.getBoundingClientRect().top;
+
+    if (headAnim >= triggerAnimate) {
+        head.classList.add("heads");
+      } else {
+        head.classList.remove("heads");
+      }
+  });
+}
