@@ -279,6 +279,7 @@ a i.fa-whatsapp:hover {
   background-color: var(--gray-3);
   z-index: 999;
   transition: 0.4s;
+  overflow: hidden;
 }
 
 .navbar a {
@@ -824,6 +825,7 @@ textarea {
 
   main {
     padding-top: 4em;
+    overflow: hidden;
   }
 
   .hero-title {
