@@ -714,6 +714,7 @@ main {
 textarea {
   width: 100%;
   cursor: text;
+  padding: .5em;
 }
 
 .form-message button {
