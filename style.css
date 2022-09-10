@@ -1,9 +1,12 @@
-@import "open-props/style";
-@import "https://unpkg.com/open-props";
-@import "https://unpkg.com/open-props/normalize.min.css"; */
+@import "https://unpkg.com/open-props/normalize.min.css";
+/* @import "open-props/style"; */
 
 :root {
-  color-scheme: light;
+  --accent-color: var(--gray-3);
+  --accent-bg: var(--gray-8);
+
+  --accent-light: var(--gray-8);
+  --accent-light-bg: var(--gray-3);
   --ff-accent: Oxanium, Verdana, sans-serif;
 }
 
@@ -84,46 +87,35 @@ button {
   color: var(--gray-2);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
+/* @media (prefers-color-scheme: dark) {
+  body {
     color-scheme: light;
-
-    --text1-light: var(--gray-8);
-    --text2-light: var(--gray-7);
-    --surface1-light: var(--gray-2);
-    --surface2-light: var(--gray-3);
-    --surface3-light: var(--gray-3);
-    --surface4-light: var(--gray-4);
-    --surface-shadow-light: 200 10% 20%;
-    --shadow-strength-light: 2%;
-    
+    color: var(--gray-3);
+    background: var(--gray-9);
   }
 
 }
 
 
-@media (prefers-color-scheme: dark) {
-  :root {
+@media (prefers-color-scheme: light) {
+  body {
     color-scheme: dark;
-
-    --text1-dark: var(--gray-2);
-    --text2-dark: var(--gray-3);
-    --surface1-dark: var(--gray-9);
-    --surface2-dark: var(--gray-8);
-    --surface3-dark: var(--gray-7);
-    --surface4-dark: var(--gray-6);
-    --surface-shadow-dark: 200 50% 3%;
-    --shadow-strength-dark: 80%;
+    color: var(--gray-9);
+    background: var(--gray-3);
   }
 
-}
+} */
 
 [color-scheme="light"] {
   color-scheme: light;
+  color: var(--gray-9);
+  background: var(--gray-3);
 }
 
 [color-scheme="dark"] {
   color-scheme: dark;
+  color: var(--gray-3);
+  background: var(--gray-9);
 }
 
 
@@ -193,7 +185,6 @@ button {
   font-size: 1.5rem;
   color: var(--text1);
   transition: 0.2s ease-in;
-  /* margin-left: -.2em; */
 
 }
 
@@ -201,7 +192,6 @@ button {
   font-size: 1.3rem;
   color: var(--yellow-8);
   transition: .2s ease-out;
-  /* margin-right: -.3em; */
 
 }
 /* Whatsapp Button */
@@ -324,7 +314,7 @@ a i.fa-whatsapp:hover {
 
 .bars {
   display: block;
-  width: 1.5em;
+  width: 1.4rem;
   height: 0.2em;
   background-color: var(--blue-9);
   margin: 0.3em;
@@ -424,7 +414,6 @@ main {
 
 .contents {
   width: 100%;
-  /* margin: 0.5em 1em; */
   scroll-behavior: smooth;
   max-width: 80rem;
   display: flex;
@@ -445,7 +434,7 @@ main {
   text-transform: uppercase;
   padding: 0 1em;
   margin-bottom: 0.5em;
-  animation: var(--animation-slide-in-down);
+  /* animation: var(--animation-slide-in-down); */
 }
 
 .content-subheader {
@@ -455,6 +444,14 @@ main {
 
 .content {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.info.form-apply {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -468,20 +465,15 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: var(--animation-slide-in-left);
+  /* animation: var(--animation-slide-in-left); */
 }
 
-/* .content.service-article img{
-  width: var(--size-14);
-  height: var(--size-14);
-  margin-right: var(--size-6);
-} */
 
 .content img {
   max-width: var(--size-14);
   max-height: var(--size-14);
   margin-right: var(--size-4);
-  animation: var(--animation-slide-in-right);
+  /* animation: var(--animation-slide-in-right); */
 }
 
 .contents .gallery-imgs {
@@ -498,27 +490,21 @@ main {
   width: var(--size-fluid-9);
   height: var(--size-fluid-9);
   margin: 0.5em;
-  /* background-color: var(--grape-7); */
   border-radius: var(--radius-conditional-3);
   box-shadow: var(--shadow-2);
   animation: var(--animation-slide-in-left);
 }
 
-.contents .gallery-imgs img:nth-child(2) {
-  animation: var(--animation-slide-in-right);
+.content .teams-info {
+  margin-left: var(--size-fluid-5);
 }
 
-/* Apply Form */
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: var(--size-fluid-3);
-  padding: var(--size-fluid-4);
-  border-radius: var(--radius-3);
-  box-shadow: var(--shadow-3);
-  width: 100%;
+.content .info.form-newsletter {
+  margin-left: var(--size-fluid-6);
+}
+
+.contents .gallery-imgs img:nth-child(2) {
+  animation: var(--animation-slide-in-right);
 }
 
 .form-content h2 {
@@ -526,6 +512,7 @@ main {
   font-weight: var(--font-weight-6);
   text-align: center;
 }
+ 
 
 .form-group label {
   display: flex;
@@ -685,8 +672,8 @@ main {
 }
 
 .form-message .form-content {
-  box-shadow: var(--shadow-2);
-  padding: var(--size-fluid-4);
+  /* box-shadow: var(--shadow-2); */
+  padding: 1em var(--size-fluid-6);
 }
 
 textarea {
@@ -794,23 +781,26 @@ textarea {
   }
 
   .navbar ul li a:hover {
-    background: var(--gray-4);
-    color: var(--blue-7);
+    background: var(--gray-5);
+    color: var(--blue-8);
   }
 
   .hamburger {
     display: block;
-    --webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
+    --webkit-transform: rotate(0deg);
+    transform: rotate(360deg);
+    background: var(--gray-4);
   }
 
   .hamburger.active {
     --webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+    background: var(--gray-3);
+
   }
 
   .hamburger.active .bars:nth-child(1) {
-    --webkit-transform: rotate(45deg) translateY(5px);
+    --webkit-transform: rotate(45deg) translateY(11.5px);
     transform: rotate(45deg) translateY(11.5px);
   }
 
@@ -819,8 +809,8 @@ textarea {
   }
 
   .hamburger.active .bars:nth-child(3) {
-    --webkit-transform: rotate(-45deg) translateY(-5px);
-    transform: rotate(-45deg) translateY(-11px);
+    --webkit-transform: rotate(-45deg) translateY(-11px);
+    transform: rotate(-45deg) translateY(-11.5px);
   }
 
   main {
@@ -878,6 +868,14 @@ textarea {
     padding-top: 3.5em;
   }
 
+  .content img {
+    animation: none;
+  }
+
+  /* .content, .content-header {
+    animation: var(--animation-slide-in-up);
+  } */
+
   .content {
     display: flex;
     flex-direction: column;
@@ -911,6 +909,14 @@ textarea {
     margin-bottom: var(--size-fluid-1);
     margin-right: none;
     width: 100%;
+  }
+
+  .content .teams-info {
+    margin-left: 0;
+  }
+  
+  .content .info.form-newsletter {
+    margin-left: 0;
   }
 
   .contents .gallery-imgs img {
@@ -963,6 +969,10 @@ textarea {
     /* overflow: hidden; */
   }
 
+  .info.form-apply .form-group {
+    width: 20rem;
+  }
+
   .form-content h2 {
     font-size: var(--size-fluid-3);
     margin: 0 auto;
@@ -971,16 +981,6 @@ textarea {
     display: block;
   }
 
-  .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: var(--size-15);
-    box-shadow: none;
-    width: 100vw;
-  }
 
   .form-group textarea,
   .form-group input {
@@ -993,6 +993,8 @@ textarea {
     margin: 1.5em auto;
   }
 
+
+ 
   .info .address h2 {
     margin: 1em auto;
     margin-left: 3em;
@@ -1063,6 +1065,11 @@ textarea {
     margin: 0 auto;
     padding: 0;
     font-size: var(--size-fluid-2);
+  }
+
+  .info.form-apply .form-group {
+    width: 15rem;
+    margin: 0 .5em;
   }
 
   .contents .gallery-imgs {
@@ -1146,7 +1153,7 @@ textarea {
   }
 }
 
-@media screen and (width >= 768px) and (width <= 1024px) {
+@media screen and (width > 768px) and (width <= 1024px) {
   main {
     padding-top: 4em;
   }
@@ -1281,13 +1288,7 @@ textarea {
 
   .info {
     display: block;
-    width: var(--size-fluid-12);
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .form {
-    display: block;
+    /* width: var(--size-fluid-12); */
     overflow: hidden;
     width: 100%;
   }
@@ -1323,7 +1324,7 @@ textarea {
 
   .form-group button {
     margin-top: 1.5em;
-    /* width: 100%; */
+    width: 100%;
     font-size: var(--size-fluid-3);
   }
 
@@ -1353,7 +1354,7 @@ textarea {
     width: 30rem;
   }
 
-  .form {
+  .form-message {
     box-shadow: none;
   }
 
@@ -1437,6 +1438,11 @@ footer p {
 footer .call-us {
   margin-bottom: -4em;
   margin-top: 1em;
+}
+
+footer .call-us a {
+  color: var(--gray-3);
+  font-weight: 500;
 }
 
 .footer-content {

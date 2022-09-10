@@ -27,7 +27,7 @@ window.addEventListener("click", (e) => {
 barMenu.addEventListener("click", openNav);
 navLink.forEach((n) => n.addEventListener("click", closeNav));
 
-const contents = document.querySelectorAll(".contents");
+const contents = document.querySelectorAll(".content");
 const imgs = document.querySelectorAll(".showcase");
 const paragraphs = document.querySelectorAll(".para");
 const heads = document.querySelectorAll(".head");
