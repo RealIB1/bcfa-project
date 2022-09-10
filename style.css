@@ -1,4 +1,4 @@
-/* @import "open-props/style"; */
+@import "open-props/style";
 @import "https://unpkg.com/open-props/normalize.min.css";
 
 :root {
@@ -282,6 +282,7 @@ a i.fa-whatsapp:hover {
 .navbar ul li a:hover {
   background-color: var(--blue-9);
   color: var(--gray-2);
+  
 }
 
 .navbar .logo a:hover {
