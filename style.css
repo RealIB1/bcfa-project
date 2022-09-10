@@ -796,6 +796,7 @@ textarea {
   }
 
   .nav-menu.active {
+    padding-top: 1em;
     top: 5rem;
     left: 0;
     z-index: 0;
@@ -1449,15 +1450,15 @@ footer h4 {
 footer a {
   font-size: var(--size-fluid-2);
   font-family: var(--ff-accent);
-  color: var(--blue-9);
+  color: var(--blue-5);
 }
 
 footer a:active, footer a:focus, footer a:hover {
-  color: var(--blue-8);
+  color: var(--blue-7);
 }
 
 footer a:visited {
-  color: var(--blue-5);
+  color: var(--grape-5);
 }
 
 footer p {
