@@ -1,5 +1,5 @@
 @import "https://unpkg.com/open-props/normalize.min.css";
-/* @import "open-props/style"; */
+@import "open-props/style";
 
 :root {
   --accent-color: var(--gray-3);
