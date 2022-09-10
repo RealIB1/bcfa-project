@@ -1,5 +1,7 @@
-@import "open-props/normalize";
-@import "https://unpkg.com/open-props/normalize.min.css";
+@import "open-props/style";
+@import "https://unpkg.com/open-props";
+
+/* @import "https://unpkg.com/open-props/normalize.min.css"; */
 
 :root {
   --accent-color: var(--gray-3);
@@ -91,24 +93,51 @@ button {
   color: var(--gray-2);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  body {
-    color-scheme: light;
-    color: var(--gray-3);
-    background: var(--gray-9);
-  }
-
+input {
+  border: none;
+  border-radius: var(--radius-conditional-2);
+  outline: none;
 }
 
+:where(html) {
+  color-scheme: light;
 
-@media (prefers-color-scheme: light) {
-  body {
-    color-scheme: dark;
-    color: var(--gray-9);
-    background: var(--gray-3);
+  --link: var(--indigo-7);
+  --link-visited: var(--grape-7);
+
+  --text-1: var(--gray-9);
+  --text-2: var(--gray-7);
+
+  --surface-1: var(--gray-0);
+  --surface-2: var(--gray-2);
+  --surface-3: var(--gray-3);
+  --surface-4: var(--gray-4);
+
+  @media (--HDcolor) {
+    @supports (color(display-p3 0 .5 1)) {
+      --link: color(display-p3 0 .5 1);
+      --link-visited: color(display-p3 .6 .2 1);
+    }
   }
+}
 
-} */
+@media (--OSdark) {
+  :where(html) {
+    color-scheme: dark;
+
+    --link: var(--indigo-3);
+    --link-visited: var(--grape-3);
+
+    --text-1: var(--gray-1);
+    --text-2: var(--gray-4);
+
+    --surface-1: var(--gray-9);
+    --surface-2: var(--gray-8);
+    --surface-3: var(--gray-7);
+    --surface-4: var(--gray-6);
+  }
+}
+
 
 [color-scheme="light"] {
   color-scheme: light;
