@@ -1,4 +1,4 @@
-@import "open-props/style";
+@import "open-props/normalize";
 @import "https://unpkg.com/open-props/normalize.min.css";
 
 :root {
@@ -65,6 +65,10 @@ a:not([class]) {
 
 a {
   text-decoration: none;
+}
+
+a:visited {
+  color: var(--blue-9);
 }
 
 img,
@@ -282,7 +286,8 @@ a i.fa-whatsapp:hover {
 .navbar ul li a:hover {
   background-color: var(--blue-9);
   color: var(--gray-2);
-  
+  border-radius: var(--radius-conditional-3);
+
 }
 
 .navbar .logo a:hover {
