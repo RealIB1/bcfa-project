@@ -93,10 +93,10 @@ button {
   color: var(--gray-2);
 }
 
-input, textarea, button {
+input, textarea {
   border: none;
   border-radius: var(--radius-conditional-2);
-  outline: none;
+  outline: 2px solid var(--gray-5);
 }
 
 :where(html) {
@@ -108,10 +108,10 @@ input, textarea, button {
   --text-1: var(--gray-9);
   --text-2: var(--gray-7);
 
-  --surface-1: var(--gray-0);
-  --surface-2: var(--gray-2);
-  --surface-3: var(--gray-3);
-  --surface-4: var(--gray-4);
+  --surface-1: var(--gray-3);
+  --surface-2: var(--gray-4);
+  --surface-3: var(--gray-5);
+  --surface-4: var(--gray-6);
 
   @media (--HDcolor) {
     @supports (color(display-p3 0 .5 1)) {
@@ -128,7 +128,7 @@ input, textarea, button {
     --link: var(--indigo-3);
     --link-visited: var(--grape-3);
 
-    --text-1: var(--gray-1);
+    --text-1: var(--gray-3);
     --text-2: var(--gray-4);
 
     --surface-1: var(--gray-9);
